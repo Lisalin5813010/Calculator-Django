@@ -1,0 +1,42 @@
+
+{% load static %} {% load Gemspan %}{% load Gema %}
+{% load Gemtags %}
+{% load Gemform %}
+{%load endGemform%}
+{% load Gemp%}
+{%load endGemp%}
+{% load Gemfooter %}
+{% load Gemh1%}
+{%load Geminput%}
+{% load Gemlabel%}
+{% load Gemul%}
+{% load endGemul%}
+{% load Gemli%}
+{% load Gemlink%}
+{% Gemhead %} 
+{% Gemlink%}
+{% Gemtitle "Sign Up" %}
+  {% csrf_token %}
+{% endGemhead %}
+{% Gembody %}
+  {% Gemform "post"%}
+    {% csrf_token %}
+    {% Gemh1 "Sign Up" %}
+      {% Geminput inputType="radio" inputName="user" inputRequired=True %}
+      {% Gemlabel "Student"%}
+      {% Geminput inputType="radio" inputName="user" %}
+      {% Gemlabel "Company"%}
+    {% for field in form %}
+    {% Gemp %}
+    {% Geminput inputType=field.field.widget.input_type inputName=field.name inputId=field.id_for_label inputPlaceholder=field.label inputRequired=True%}
+    {% endGemp %}
+    {% endfor %}
+    {% Geminput inputType="submit" inputValue="Register" %}
+    {% Gemspan "Already have an account?" %}
+     {% Gema   aText="login" %}
+  {% endGemform %}
+{% endGembody %}
+
+
+
+{% Gemfooter %}

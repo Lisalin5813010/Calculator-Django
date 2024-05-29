@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %} {% load Gemspan %}{% load Gema %}
+{% load Gemtags %}
+{% load Gemnav %}
+{% load endGemnav %}
+{% load Gemh1 %}
+{% load Gemdiv %}
+{% load Gemfooter %}
+{% load endGemdiv %}
+{% load Gemtable %}
+{% load Gemlink %}
+{% Gemhead %}
+   {% Gemlink %}
+  {% Gemtitle "My People"%}
+  {% csrf_token %}
+{% endGemhead %}
+{% Gemnav %}
+{% for a in aString%}
+  {% Gema aText=a%}
+{% endfor %}
+{% endGemnav %}
+{% Gemdiv "sidebar-trigger" %} {% endGemdiv %}
+
+{% Gemdiv "sidebar-container"%}
+{% Gemdiv "sidebar"%}
+      {% for a in aString%}
+      {% Gema  aText=a%}
+    {% endfor %}
+    {% endGemdiv %}
+    {% endGemdiv %}
+  {% Gemdiv %}
+
+  {% Gemh1 "People" %}
+
+    {% Gemtable data_list %}
+  {% endGemdiv %}
+  {% Gemfooter %}

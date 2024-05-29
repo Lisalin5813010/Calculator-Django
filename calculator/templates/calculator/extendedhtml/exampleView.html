@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+{% load Gemp%}
+{% load Gemh1%}
+{% load Gemh2%}
+{% load Gemform%}
+{% load endGemform%}
+{% load Gemtextarea%}
+{% load Geminput%}
+{% load Gembutton%}
+{% load Gema%}
+{% load Gemhead %}
+{% load endGemhead %}
+{% load Gemfooter %}
+{% load Gemlink %}
+{% load Gemdiv %}
+{% load endGemdiv %}
+{% load endGemp%}
+{% load Gemli %}
+{% load endGemli %}
+{% load Gemlabel%}
+{% load Gemtags%}
+{% load Gemspan%}
+{% load Gemnav%}
+{% load Gemscript%}
+{% load endGemnav%}
+{% Gemhead %}
+{% Gemtitle "exampleView" %}
+{% Gemlink %}
+{% Gemscript%}
+{% endGemhead %}
+    {% Gemnav %} 
+    {% for a in aString%}
+      {% Gema  aText=a%}
+    {% endfor %}
+    {% endGemnav %}
+    {% Gemh1 message %}
+   
+    {% Gemdiv "sidebar-trigger" %} {% endGemdiv %}
+    {% Gemdiv "sidebar-container"%}
+    {% Gemdiv "sidebar"%}
+          {% for a in aString%}
+          {% Gema  aText=a%}
+        {% endfor %}
+        {% endGemdiv %}
+        {% endGemdiv %}
+    {% Gemform "post" %}
+    {% Gemp %}
+    {% Gemtextarea "paragraphText" "Enter your text here..."%}
+    {% endGemp %}
+    {% Gembutton "submit"  "Submit" "Submit" "showMessage()" %}   
+
+    {% endGemform %}
+  {% Gemfooter %}
+  
+
+
+
+

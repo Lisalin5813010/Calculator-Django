@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %} 
+{% load Gemspan %}
+{% load Gemtags %}
+{% load Gema %}
+{% load Gemfooter %}
+{% load Gemdiv %}
+{% load endGemdiv %}
+{% load Gemh1%}
+{% load Gemp%}
+{% load Gemform %}
+{% load Gembutton%}
+{% load endGemform %}
+{% load Geminput %}
+{% load Gemul%}
+{% load endGemul%}
+{% load Gemli%}
+{% load Gemlink%}
+{% load endGemli%}
+{% load Gemnav%}
+{% load endGemnav%}
+{% Gemhead %}
+  {% Gemlink %}
+  {% Gemtitle "My Site"%} 
+  {% csrf_token %}
+{% endGemhead %}
+{% Gemnav %}
+{% for a in aString%}
+  {% Gema aText=a%}
+{% endfor %}
+{% endGemnav %}
+{% Gemdiv "sidebar-trigger" %} {% endGemdiv %}
+{% Gemdiv "sidebar-container" %}
+{% Gemdiv "sidebar" %}
+      {% for a in aString %}
+      {% Gema  aText=a %}
+    {% endfor %}
+    {% endGemdiv %}
+    {% endGemdiv %}
+
+{% Gemform "post"%}
+  {% Gemdiv "search-container" %}
+  {% Gemdiv "search-bar" %}
+  {% Geminput inputType="text" inputName="query" inputId="query" inputPlaceholder="Search..." %}
+{% endGemdiv %}
+{% Gemp message %}
+{% endGemdiv %}
+{% endGemform %}
+
+  {% Gemdiv %}
+  {% Gemh1 "My todo List" %}
+  {% Gemform "post"%}
+    {% csrf_token %}
+    {% Geminput inputType="text" inputName="content"%}
+    {% Gembutton "submit"  "addTodoItem" "Add" %}
+  {% endGemform %}
+  {% Gemul  %}
+      {% for item in all_todo_items %}
+        {% Gemli "liclass" item.content %}
+          {% Gemform "post" %}
+            {% csrf_token %} 
+              {% Gema item_pk=item.pk aText='delete'  %}
+          {% endGemform %}
+        {% endGemli %}
+      {%endfor%}
+      {% endGemul %}
+    {% endGemdiv %}
+    {% Gemfooter %}

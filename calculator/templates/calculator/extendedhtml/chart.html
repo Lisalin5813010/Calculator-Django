@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}{% load Gemlink %}{% load Gema %}
+{% load Gemnav %}
+{% load endGemnav %}
+{% load Gemdiv %}
+{% load Gemfooter %}
+{% load endGemdiv %}
+{% load Gemh1 %}
+{% load Gemul %}
+{% load Gemli %}
+{% load endGemli %}
+{% load endGemul %}
+{% load Gemh2 %}
+{% load Gemhead %}
+{% load endGemhead %}
+{% load Gemspan %}
+{% load Gemimg %}
+{% load Gemtitle %}
+{% Gemhead %}
+{% Gemlink %}
+  {% Gemtitle "Chart"%}
+{% endGemhead %}
+  {% Gemnav %}
+  {% for a in aString%}
+    {% Gema aText=a %} 
+  {% endfor %}
+  {% endGemnav %}
+  {% Gemdiv "sidebar-trigger" %} {% endGemdiv %}
+  {% Gemdiv "sidebar-container"%}
+  {% Gemdiv "sidebar"%}
+        {% for a in aString%}
+        {% Gema   aText=a%}
+      {% endfor %}
+      {% endGemdiv %}
+     
+      {% endGemdiv %}
+  {% Gemdiv "table-of-contents" %}
+    {% Gemh2 "Table of Contents" %}
+      {% for file in filenames%}
+        {% Gemli "" file %}{% endGemli %}
+      {% endfor %}     
+  {% endGemdiv %}
+  {% Gemdiv %}
+    {% for file in filenames%}
+    {% Gemh1 file %}
+    {% Gemimg file %}
+    {% endfor %}
+  {% endGemdiv %}
+  {% Gemfooter %}

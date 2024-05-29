@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %} 
+{% load Gemspan %}
+{% load Gema %}
+{% load Gemnav%}
+{% load Gemdiv %}
+{% load endGemdiv %}
+{% load endGemnav %}
+{% load endGemform %}
+{%load endGemp%}
+{%load Geminput%}
+{%load Gemtags %}
+{%load Gemform %}
+{%load endGemform %}
+{%load Gemp%}
+{%load Gemlink%}
+{%load Gemh1%}
+{%load Gemlabel%}
+{% load Gemfooter %}
+{%load Geminput%}
+
+{% Gemhead %}
+  {% Gemlink %}
+  {% Gemtitle "Login"%}
+{% endGemhead %}
+  {% Gemh1 "Login" %}
+  {%Gemform "post"%}
+    {% csrf_token %} 
+    {% Gemp %}
+      
+      {% Geminput inputType="text" inputName="username" inputId="username" inputPlaceholder="username"%} 
+    {% endGemp %}
+    {% Gemp %}
+      
+      {% Geminput inputType="password" inputName="password" inputId="password" inputPlaceholder="password"%}         
+    {% endGemp %}
+    {% Geminput inputType="submit" inputValue="login" %}
+    {% Gema aText="register"%}
+  {% endGemform %}
+{% Gemfooter %}

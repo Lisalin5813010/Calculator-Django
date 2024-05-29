@@ -1,0 +1,171 @@
+body {
+
+  background-color:#2b3e50;
+  text-align: center;
+}
+.diary{
+  font-family: 'Indie Flower', cursive;
+  font-size:15px;
+  list-style: none;
+}
+.liclass{
+  list-style: none;
+  font-size:20px;
+}
+div {
+  text-align: center;
+}
+form {
+  display: inline-block;
+}
+.nav-link[id='link-style'] {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+.nav-link:not(:last-child) {
+  margin-right: 10px; 
+}
+
+.nav-link:last-child {
+  margin-left: auto; /* This will push the last item to the far right */
+}
+#text-style {
+  font-size: 20px;
+  color: black;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+caption {
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  caption-side: top;
+  color: black;
+  font-weight: bold;
+}
+
+.hoverstyle:hover {
+  color: cadetblue;
+}
+
+.style {
+  font-size: 20px;
+}
+
+.tablestyles{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* search.css */
+
+/* search.css */
+
+.search-container {
+  position: fixed;
+  right: 0;
+  top: 5px;
+  padding: 10px;
+  z-index: 100; /* Ensure it's above other content */
+}
+
+.search-bar {
+  position: relative;
+  width: 200px; /* Adjust as needed */
+}
+
+.search-input {
+  width: 100%;
+  padding: 5px 30px 5px 10px; /* Adjust padding for positioning */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px; /* Adjust as needed */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Makes the icon non-interactive */
+}
+
+/* styles.css */
+/* CSS for the slide-in sidebar */
+
+.sidebar-container {
+  position: fixed;
+  left: -250px; /* Sidebar width (negative) */
+  top: 60px;
+  width: 250px; /* Width of the sidebar */
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* Thin strip for triggering the sidebar */
+.sidebar-trigger {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10px; /* Width of the trigger area */
+  height: 100%;
+  z-index: 1100;
+  cursor: pointer; /* Optional: changes the mouse cursor on hover */
+}
+
+/* Expand the sidebar on hover */
+.sidebar-trigger:hover + .sidebar-container, 
+.sidebar-container:hover {
+  left: 0;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color:#df691a;
+ 
+  display: block;
+  transition: background-color 0.3s;
+}
+
+
+
+
+/* CSS for the Table of Contents */
+.table-of-contents {
+  position: fixed;
+  right: 210px; /* Adjust this value based on your sidebar's width */
+  top: 160px;
+  width: 200px; /* Adjust the width of the ToC as needed */
+  background-color:#2b3e50; /* or any color that fits your design */
+  padding: 10px;
+  /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for better visibility */
+  z-index: 1000; /* Ensure it's above other content but below modal/pop-up levels */
+  overflow-y: auto; /* In case the ToC is very long */
+  max-height: 100vh; /* Limit the height to the viewport */
+}
+
+.table-of-contents h2 {
+  margin-top: 0; /* Adjust spacing at the top of the ToC */
+}
+
+.table-of-contents ul {
+  list-style-type: none; /* Removes the default list styling */
+  padding: 0; /* Removes default padding */
+}
+
+.table-of-contents li a {
+  text-decoration: none;
+  color: #007bff; /* Example link color, adjust as needed */
+  display: block;
+  padding: 5px 0; /* Spacing for each ToC item */
+}
+
+.table-of-contents li a:hover {
+  text-decoration: underline; /* Optional: style for hover state */
+}

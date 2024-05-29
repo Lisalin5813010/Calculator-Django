@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %} {% load Gemspan %}{% load Gema %}
+{% load Gemtags %}
+{%load Gemnav%}
+{%load endGemnav%}
+{% load Gemh1 %}
+{% load Gemdiv %}
+{% load Gemfooter %}
+{% load endGemdiv %}
+{% load Gemlink %} 
+{% load Gemform %}
+{% load Gemp %}
+{% load endGemp %}
+{% load Gembutton %}
+{% load Geminput %}
+{% load endGemform %}
+
+{% Gemhead %}
+  {% Gemlink %} 
+  {% Gemtitle "Delete Site"%} 
+  {% csrf_token %}
+{% endGemhead %}
+{% Gembody %}
+  {% Gemnav %} 
+  {% for a in aString%}
+  {% Gema  aText=a%}
+  {% endfor %}
+  {% endGemnav %} 
+    {% Gembody %}
+  {% Gemdiv %}
+  {% Gemh1 "Delete" %}
+  {% Gemform "post"%}
+  {% csrf_token %}
+  {% Gemp "Are you sure that you want to delete"%}
+  {% endGemp%}
+  {% Gemdiv %}
+    {% Gembutton "submit" "delete" "Yes, Delete" %}
+    {% Gema  aText="cancel" %}
+  {%endGemdiv%}
+  {% endGemform %}
+
+  {% endGemdiv %}
+{% endGembody %}
+{% Gemfooter %}

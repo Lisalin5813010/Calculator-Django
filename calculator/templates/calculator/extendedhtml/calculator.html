@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load Gemspan %}
+{% load Gema %}
+{% load Gemp %}
+{% load Gemh1 %}
+{% load Gemfooter %}
+{% load Gembutton %}
+{% load endGemp %}
+{% load Gemlink %}
+{% load endGemhead %}
+{% load Gemtitle %}
+{% load Gemhead %}
+{% load Gemtitle %}
+{% load Gemlabel %}
+{% load Geminput %}
+{% load Gemform %}
+{% load endGemform %}
+{% load Gemnav %}
+{% load Gemlink %}
+{% load Gemdiv %}
+{% load endGemdiv %}
+{% load endGemnav %}
+{% load Gembody%}
+{% load endGembody%}
+{% Gemhead %}
+  {% Gemlink %}
+  {% Gemtitle "My Site"%} 
+{% endGemhead %}
+  {% Gemnav %} 
+  {% for a in aString%}
+    {% Gema aText=a%}
+  {% endfor %}
+  {% endGemnav %}
+  {% Gemdiv "sidebar-trigger" %} {% endGemdiv %}
+  {% Gemdiv "sidebar-container"%}
+  {% Gemdiv "sidebar"%}
+        {% for a in aString%}
+        {% Gema aText=a%}
+      {% endfor %}
+      {% endGemdiv %}
+    
+      {% endGemdiv %}
+    {% Gemh1 "Calculator" %}
+    {% Gemform "post"%}
+      {% csrf_token %}
+      {% Gemp %}
+        {% Geminput inputType="text" inputName="num1" inputId="num1" inputPlaceholder="num1"%}
+      {% endGemp %}
+      {% Gemp %}
+        {% Geminput inputType="text" inputName="num2" inputId="num2"  inputPlaceholder="num2"%} 
+      {% endGemp %}
+      {% Gemdiv %}
+        {% Gembutton "submit"  "add" "ADD"%}   
+        {% Gembutton "submit"  "sub" "SUB"%}
+        {% Gembutton "submit"  "mul" "MUL"%}
+        {% Gembutton "submit"  "div" "DIV"%}
+        {% Gembutton "submit" "reset" "RESET"%}
+        {% endGemdiv %}
+    {% endGemform %}
+    {% Gemdiv %}
+      {% Gemspan result %}
+    {% endGemdiv %}
+  {% endGemdiv %}
+  {% endGemdiv %}
+
+  {% Gemfooter %}
