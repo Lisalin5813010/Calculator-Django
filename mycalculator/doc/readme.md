@@ -10,14 +10,14 @@
 ----------------------------------------------------------------------
 
 ## Goal
-This project is a simple application that contains a table, a chart dashboard and a todolist app based on django framework.
+This project is a simple application that contains a table, a chart dashboard and a todolist app based on Django framework.
 
 ----------------------------------------------------------------------
 
 
 ## Implementation
  
- This application contains a registration system, in order to use the following functionalities, user must register or login at first.
+ This application contains a registration system, in order to use the following functionalities, the user must register or log at first.
  </br>
  _user: lisa_
  </br>
@@ -34,7 +34,7 @@ This project is a simple application that contains a table, a chart dashboard an
 _sign up_
 ### Calculator
 
-When you click the **calculator** tab in navigator bar, it will navigates to the calculator.
+When you click the **calculator** tab in the navigator bar, it will navigate to the calculator.
 
 
 <img src="./images/calculator.png" alt="calculator" width=50%>
@@ -108,3 +108,10 @@ The existed admin account:
 Username: lisalin
 Password: lys220130
 ```
+----------------------------------------------------------------------
+
+# Todo : #
+
+Integrate `sqlite3` `student` with the application, add CURD operations for student table.
+
+

@@ -1,0 +1,7 @@
+GRADLE_HOME=/usr/local/gradle-8.1.1
+export GRADLE_HOME
+export PATH=$PATH:$GRADLE_HOME/bin
+export MAVEN_HOME=/usr/local/apache-maven-3.8.8
+export PATH=$MAVEN_HOME/bin/:$PATH
+alias python=/usr/bin/python3
+alias pip=/usr/bin/pip3
