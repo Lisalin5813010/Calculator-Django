@@ -1,0 +1,22 @@
+{
+  "name": "mycalculator",
+  "homepage": "https://github.com/Lisalin5813010/Django_Project",
+  "authors": [
+    "“Lisalin5813010” <lisalin5813010@yahoo.de>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "bootstrap": "^4.5.0"
+  }
+}

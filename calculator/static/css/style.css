@@ -1,6 +1,6 @@
 body {
 
-  background-color:#2b3e50;
+  background-color:#082B44;
   text-align: center;
 }
 .diary{
@@ -12,6 +12,10 @@ body {
   list-style: none;
   font-size:20px;
 }
+.navbar-brand {
+  color: rgb(223, 71, 89);  /* Replace #yourColor with your desired color (e.g., #ff0000 for red) */
+}
+
 div {
   text-align: center;
 }
@@ -127,8 +131,7 @@ caption {
   padding: 10px 15px;
   text-decoration: none;
   font-size: 18px;
-  color:#df691a;
- 
+  color:rgb(223, 71, 89);
   display: block;
   transition: background-color 0.3s;
 }
@@ -168,4 +171,33 @@ caption {
 
 .table-of-contents li a:hover {
   text-decoration: underline; /* Optional: style for hover state */
+}
+
+#page-wrapper {
+  position: relative; /* Makes absolute positioning work within the wrapper */
+  min-height: 100vh; /* Ensures the wrapper takes up the full viewport height */
+}
+
+footer {
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Ensures footer stretches across the entire width */
+}
+
+
+.footer-container {
+  display: flex; /* Arrange elements horizontally */
+  justify-content: space-between; /* Space elements evenly */
+  width: 80%; /* Limit container width to 80% */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.footer-container a {
+  color: rgb(223, 71, 89); /* Darker text color for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer-container a:hover {
+  color: #e5dada; /* Change link color on hover */
 }

@@ -27,6 +27,8 @@ def generate_random_financial_data(start_date, end_date, num_points):
     df['High'] = df[['Open', 'Close']].max(axis=1) + df['High'] / 10
     df['Low'] = df[['Open', 'Close']].min(axis=1) - df['Low'] / 10
     return df
+
+    
 class ChartView(Chart):
 
   def get(self, request):

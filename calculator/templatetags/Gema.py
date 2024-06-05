@@ -1,7 +1,5 @@
 from django import template
 from django.urls import reverse
-import calculator.todoappView as todoappView
-from django.utils.html import escape
 
 register = template.Library()
 @register.inclusion_tag('calculator/Gema.html')

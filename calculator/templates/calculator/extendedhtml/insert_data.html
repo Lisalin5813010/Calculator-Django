@@ -1,0 +1,79 @@
+{% load static %} {% load Gemspan %}{% load Gema %}
+{% load Gemtags %}
+{% load Gemnav %}
+{% load endGemnav %}
+{% load Gemh1 %}
+{% load Gemdiv %}
+{% load Gemfooter %}
+{% load endGemdiv %}
+{% load Gemtable %}
+{% load Gemlink %}
+{% load Gembutton%}
+{% load Gemscript%}
+{% Gemscript%}
+
+  {% Gemhead %}
+  {% Gemlink %}
+ {% Gemtitle "My People"%}
+ {% csrf_token %}
+{% endGemhead %}
+  {% Gemnav %}
+  {% for a in aString%}
+    {% Gema aText=a%}
+  {% endfor %}
+  {% endGemnav %}
+  {% Gemdiv "sidebar-trigger" %} {% endGemdiv %}
+{% Gemdiv "sidebar-container"%}
+  <a href="{% url 'admin:index' %}">
+    <img src="{% static 'css/images/umsra_logo.png' %}" height="100px" />
+  </a>
+{% Gemdiv "sidebar"%}
+      {% for a in aString%}
+      {% Gema  aText=a%}
+    {% endfor %}
+    {% endGemdiv %}
+    {% endGemdiv %}
+  {% Gemdiv %}
+  {% Gemh1 "Insert Data" %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender"><br><br>
+        {% Gembutton "submit"  "Submit" "Submit" "validateForm()" %}
+    </form>
+    {% if students_list %}
+    <h1>Student List</h1>
+    {% endif %}
+    <table class="table table-hover" style="margin:auto; font-size: 20px;">
+      <thead>
+          {% for col in students_list.0.keys %}
+             <th style="text-align: center;">{{ col }}</th>
+          {% endfor %}
+      </thead>
+      <thead>
+      
+      <tbody>
+        {% for item in students_list %}
+          <tr>   
+            {% for key, value in item.items %}
+              <td style="text-align: center;">{{ value }} 
+            {% endfor %}
+            <td>
+              <form method="post" action="{% url 'delete_student' item.id %}">
+                
+                {% csrf_token %}
+                <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+            
+              </form>
+            </td>          
+            </td>
+    
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+{% Gemfooter %}

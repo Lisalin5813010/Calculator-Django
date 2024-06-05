@@ -1,0 +1,31 @@
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+components/
+bower_components/
+bower.json
+
+
+# Private media
+media
+
+# Static files
+staticfiles
+
+# Local environment
+.env
+*.env
+
+# Virtual environments
+envforDjango/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/

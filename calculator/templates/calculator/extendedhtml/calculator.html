@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 {% load Gemspan %}
 {% load Gema %}
 {% load Gemp %}
@@ -26,13 +27,18 @@
   {% Gemlink %}
   {% Gemtitle "My Site"%} 
 {% endGemhead %}
+
   {% Gemnav %} 
+  
   {% for a in aString%}
     {% Gema aText=a%}
   {% endfor %}
   {% endGemnav %}
   {% Gemdiv "sidebar-trigger" %} {% endGemdiv %}
   {% Gemdiv "sidebar-container"%}
+  <a href="{% url 'admin:index' %}">
+    <img src="{% static 'css/images/umsra_logo.png' %}" height="100px" />
+  </a>
   {% Gemdiv "sidebar"%}
         {% for a in aString%}
         {% Gema aText=a%}

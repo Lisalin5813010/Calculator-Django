@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'calculator',
+    'schedule',
     'django_tables2',
     'clearcache',
+    'djangobower',
 
 ]
 
@@ -74,9 +76,21 @@ TEMPLATES = [
         },
     },
 ]
-
+TEMPLATE_CONTEXT_PROCESSORS= 'django.template.context_processors.request'
 WSGI_APPLICATION = 'mycalculator.wsgi.application'
 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'djangobower.finders.BowerFinder',  # Ensure this line is correct
+]
+
+BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'jquery-ui',
+    'bootstrap'
+)
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -128,5 +142,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'components'),
 ]
 LOGIN_URL = '/login/'

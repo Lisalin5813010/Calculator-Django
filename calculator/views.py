@@ -1,10 +1,8 @@
-
-from matplotlib import pyplot as plt
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from calculator.forms import RegisterForm, LoginForm
 # Create your views here.
@@ -17,13 +15,14 @@ def sign_up(request):
     else:
         form = RegisterForm(request.POST)
         user_type = request.POST.get('user')
-        if form.is_valid()& (user_type is not None):
+        if form.is_valid() & (user_type is not None):
             user = form.save(commit=False)
             user.username = user.username.lower()
             user.save()
             login(request, user)
             return redirect("calculator")
         else:
+            print(form.errors)
             return render(request, "calculator/register.html", {"form": form})
 
 def sign_in(request):
@@ -44,7 +43,7 @@ def sign_in(request):
 
 
 
-@login_required
+@login_required()
 def sign_out(request):
     logout(request)
     return redirect('login')
@@ -59,10 +58,10 @@ class Chart(LoginRequiredMixin, TemplateView):
 
 # Person view which will be inhereted by personView.py
 
-
 class People(LoginRequiredMixin, TemplateView):
 
-    template_name = 'calculator/extendedhtml/people.html'
+    template_name = 'calculator/extendedhtml/insert_data.html'
+    
 
 
 # calculator view which will be inhereted by calculatorView.py

@@ -1,10 +1,11 @@
-from django.http import HttpResponse
+
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from calculator.views import Todoapp
-from django.contrib import messages
 from .models import TodoListItem
+from django.contrib.auth.mixins import LoginRequiredMixin
 aString= ['calculator','people','chart','todoapp','exampleView','logout']
+
 class TodoappView(Todoapp):
     
     def get(self, request):

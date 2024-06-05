@@ -115,3 +115,9 @@ Password: lys220130
 Integrate `sqlite3` `student` with the application, add CURD operations for student table.
 
 
+# Setting #
+Virtual Environment: envforDjango</br>
+python version: 3.9.19</br>
+pip version:</br>
+`python3.9 manage.py runserver` to start the server</br>
+```

@@ -20,5 +20,7 @@ urlpatterns = [
     path('logout/', views.sign_out, name='logout'),
     path('login/', views.sign_in, name='login'),
     path('todoapp/', TodoappView.as_view(), name='cancel'),
+    path('delete_student/<int:pk>/',
+         PersonView.delete_student, name='delete_student'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

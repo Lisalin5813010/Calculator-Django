@@ -1,5 +1,3 @@
-
-from datetime import datetime
 from django.views.generic import TemplateView
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -26,7 +24,3 @@ class ExampleView(TemplateView, LoginRequiredMixin):
       else:
          return redirect('exampleView')
       return render(request, self.template_name,context)
-    
-    
-       
-      
