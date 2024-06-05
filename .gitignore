@@ -29,3 +29,6 @@ envforDjango/
 
 # VS Code
 .vscode/
+
+#pycache
+__pycache__/
