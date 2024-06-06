@@ -5,7 +5,6 @@ import random
 import numpy as np
 from matplotlib import pyplot as plt
 import matplotlib
-import mplfinance as mpf
 import pandas as pd
 import numpy as np
 import random
@@ -15,6 +14,7 @@ import random
 matplotlib.use('Agg')
 
 aString= ['calculator','people','chart','todoapp','exampleView','logout']
+
 def generate_random_financial_data(start_date, end_date, num_points):
     dates = pd.date_range(start_date, end_date, periods=num_points)
     data = {
@@ -28,7 +28,7 @@ def generate_random_financial_data(start_date, end_date, num_points):
     df['Low'] = df[['Open', 'Close']].min(axis=1) - df['Low'] / 10
     return df
 
-    
+
 class ChartView(Chart):
 
   def get(self, request):
