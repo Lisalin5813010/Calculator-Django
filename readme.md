@@ -1,6 +1,6 @@
 #     Calculator-Django
 
-This is a simple Django project that can perform basic operations: an authorization system, a a alculator, a student table, chart dashboard and a todo-list.
+This project is a straightforward Django web application that uses MySQL as its database management system. It includes essential features such as an authorization system, a calculator, a student records table, a chart dashboard, and a to-do list.
 
 1. **Prerequisites**
    - `Django`
