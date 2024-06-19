@@ -1,17 +1,6 @@
-# Mycalculator
+#     Calculator-Django
 
-This is a simple Django project that can perform basic operations.  The project is built using Python and Django.
-
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-
-
-
-
-Provide step-by-step instructions on how to install and set up the project locally. This typically includes:
+This is a simple Django project that can perform basic operations: an authorization system, a a alculator, a student table, chart dashboard and a todo-list.
 
 1. **Prerequisites**
    - `Django`
@@ -28,12 +17,10 @@ Provide step-by-step instructions on how to install and set up the project local
 ## Usage
 - Login System
     ![Screenshot of the web application](doc/images/login.png)
-- Register System
-    ![Screenshot of the web application](doc/images/register.png)
 - Calculator
     ![Screenshot of the web application](doc/images/calculator.png)
 - Student table
-    ![Screenshot of the web application](doc/images/login.png)
+    ![Screenshot of the web application](doc/images/studentTable.png)
 - Charts
     ![Screenshot of the web application](doc/images/charts.png)
 - TodoList
